@@ -16,16 +16,14 @@ def get_max_salary(path: str) -> int:
 
 def get_min_salary(path: str) -> int:
     jobs_data = read(path)
-    min_salary = 0
-    for job in jobs_data:
-        if job['min_salary'] != 'invalid' and job['min_salary'] != '':
-            min_salary = int(float(job['min_salary']))
-            break
-    for job in jobs_data:
-        if job['min_salary'] == 'invalid' or job['min_salary'] == '':
-            continue
-        elif int(float(job['min_salary'])) < min_salary:
-            min_salary = int(float(job['min_salary']))
+    new_jobs_data = [
+                        job for job in jobs_data
+                        if job['min_salary'] != 'invalid'
+                        and job['min_salary'] != ''
+                    ]
+    min_salary = int(float(new_jobs_data[0]['min_salary']))
+    for job in new_jobs_data:
+        min_salary = min(int(float(job['min_salary'])), min_salary)
     return min_salary
 
 
