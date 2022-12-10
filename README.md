@@ -1,5 +1,8 @@
 # Jobs Insights
 
+![sistema](https://user-images.githubusercontent.com/23152592/206872208-2d8e1fa3-758c-4f13-9ca5-7cfe95e19a01.png)
+
+
 # Contexto
 Esse projeto trata de análises a partir de um conjunto de dados sobre empregos(data/jobs.csv). As minhas implementações foram incorporadas a um aplicativo Web desenvolvido com Flask (feito pela Trybe). e também fiz alguns testes para a implementação de uma análise de dados. Por fim, como bônus, escrevi uma rota e view para um recurso novo usando Flask!
 
