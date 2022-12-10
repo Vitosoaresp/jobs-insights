@@ -66,13 +66,14 @@ def list_jobs():
 
 @bp.route("/jobs/<index>")
 def job(index):
-    list_jobs = read(path="data/jobs.csv")
-    if int(index) > len(list_jobs):
-        return abort(404)
-    job_index = list_jobs[int(index)]
-    job_view = get_job(list_jobs, id_=job_index["id"])
+    try:
+        list_jobs = read(path="data/jobs.csv")
+        job_index = list_jobs[int(index)]
+        job_view = get_job(list_jobs, id_=job_index["id"])
 
-    return render_template("job.jinja2", job=job_view), 200
+        return render_template("job.jinja2", job=job_view), 200
+    except AssertionError:
+        abort(404)
 
 
 def init_app(app: Flask):
