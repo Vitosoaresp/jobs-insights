@@ -1,10 +1,46 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Jobs Insights
+
+# Contexto
+Esse projeto trata de análises a partir de um conjunto de dados sobre empregos(data/jobs.csv). As minhas implementações foram incorporadas a um aplicativo Web desenvolvido com Flask (feito pela Trybe). e também fiz alguns testes para a implementação de uma análise de dados. Por fim, como bônus, escrevi uma rota e view para um recurso novo usando Flask!
+
+## Técnologias usadas
+
+Back-end:
+> Desenvolvido usando: [Python](https://docs.python.org/3/), [Pytest](https://docs.pytest.org/en/7.2.x/), Flake8, Black
+
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
+
+## Crie um ambiente virtual
+
+```bash
+ python3 -m venv .venv && source .venv/bin/activate
+```
+
+
+## Instale as dependências
+
+```bash
+ python3 -m pip install -r dev-requirements.txt
+``` 
+## Executando aplicação
+
+- A aplicação rodará em http://localhost:5000
+
+  ```
+    flask run
+  ```
+
+## Executando Testes
+
+* Para rodar todos os testes:
+
+  ```
+    python3 -m pytest
+  ```
+  
+* Para rodar de um arquivo especifico:
+
+  ```
+   python3 -m pytest tests/nomedoarquivo.py
+  ```
